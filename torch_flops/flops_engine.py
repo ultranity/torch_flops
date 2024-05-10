@@ -386,7 +386,7 @@ class TorchFLOPsByFX():
                   "See 'https://pytorch.org/docs/stable/fx.html#limitations-of-symbolic-tracing' for more instructions.\033[0m")
             raise e
         except TypeError as e:
-            print("\033[33mNOTE: The model cannot be built as a graph model by 'symbolic_trace()'. Please replace the `tensor.shape[i]` that servers as the parameter of a function with a pre-defined deterministic value.\033[0m")
+            print("\033[33mNOTE: The model cannot be built as a graph model by 'symbolic_trace()'. Please replace the `tensor.shape[i]` that serves as the parameter of a function with a pre-defined deterministic value.\033[0m")
             raise e
 
         assert mem_func_name in ['memory_allocated', 'max_memory_allocated']
